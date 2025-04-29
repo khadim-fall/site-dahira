@@ -97,6 +97,7 @@
   left: 10px;
 }
 
+
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -1167,13 +1168,15 @@ section,
 }
 
 .clients .client-logo {
-  background-color: #f9f9f9; /* temporaire pour mieux voir */
+  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc; /* simplification pour test */
+  border-right: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
   overflow: hidden;
-  min-height: 150px; /* optionnel pour forcer la hauteur */
 }
 
 .clients .client-logo img {
@@ -1183,6 +1186,7 @@ section,
   height: auto;
   transition: 0.3s;
 }
+
 
 @media (max-width: 640px) {
   .clients .client-logo img {

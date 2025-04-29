@@ -1,0 +1,94 @@
+[
+    {
+      "image": "assets/img/blog/blog-1.jpg",
+      "category": "Événement",
+      "title": "Conférence Annuelle de la Communauté",
+      "authorImage": "assets/img/blog/blog-author.jpg",
+      "authorName": "Imam Ali",
+      "date": "2025-03-01",
+      "link": "blog-details.html"
+    },
+    {
+     "image": "assets/img/blog/blog-1.jpg",
+      "category": "Formation",
+      "title": "Cours de Tajwid pour débutants",
+      "authorImage": "assets/img/blog/blog-author-2.jpg",
+      "authorName": "Oustaz Aminata",
+      "date": "2025-04-10",
+      "link": "blog-details.html"
+    },
+    {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       }
+      ,
+      {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       },
+       {
+        "image": "assets/img/blog/blog-1.jpg",
+         "category": "Formation",
+         "title": "Cours de Tajwid pour débutants",
+         "authorImage": "assets/img/blog/blog-author-2.jpg",
+         "authorName": "Oustaz Aminata",
+         "date": "2025-04-10",
+         "link": "blog-details.html"
+       }
+  ]
+  
