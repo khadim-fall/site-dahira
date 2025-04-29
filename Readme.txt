@@ -1,6 +1,2 @@
-Thanks for downloading this template!
-
-Template Name: KnightOne
-Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Un site vitrine pour notre Dahira MIFTAHOUNE NASRI
+Author: Khadim FALL
