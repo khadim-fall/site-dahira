@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miftahoun Nasri</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo-nasri.jpg" rel="icon" />
+    <link href="assets/img/logo-nasri.jpg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .service-item .icon {
+        font-size: 48px; /* Agrandir l'icône */
+        color: #d4af37; /* Couleur dorée (#d4af37 est un beau doré) */
+        margin-bottom: 15px; /* Espace sous l'icône */
+      }
+
+      /* Optionnel : effet au survol pour plus de modernité */
+      .service-item:hover .icon {
+        color: #f7c948; /* Un doré plus clair au hover */
+        transform: scale(1.1); /* Agrandissement léger au survol */
+        transition: all 0.3s ease;
+      }
+    </style>
+    <style>
+      #galerie-membres img {
+        width: 100%;
+        height: 250px; /* ou autre hauteur fixe selon ton besoin */
+        object-fit: cover;
+        border-radius: 8px; /* optionnel pour arrondir les coins */
+      }
+
+      .portfolio-info {
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+    <!-- CSS pour aligner les informations de contact -->
+    <style>
+      .info-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .info-item i {
+        font-size: 30px;
+        color: #28a745;
+        margin-right: 15px;
+      }
+
+      .info-item h3 {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .info-item p {
+        margin: 0;
+        font-size: 16px;
+        color: #555;
+      }
+
+      /* Flexbox pour l'alignement des colonnes */
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .col-md-4 {
+        flex: 1;
+        margin-right: 15px;
+      }
+
+      .col-md-4:last-child {
+        margin-right: 0;
+      }
+
+      /* Responsivité */
+      @media (max-width: 768px) {
+        .row {
+          flex-direction: column;
+          align-items: center;
+        }
+        .col-md-4 {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Logo -->
+          <img src="assets/img/logo-nasri.jpg" alt="" />
+          <h1 class="sitename">MiftahounNasri</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Accueil</a></li>
+            <li><a href="#about">À propos de nous</a></li>
+            <li><a href="#services">Notre Mission</a></li>
+            <li><a href="#portfolio">Galerie</a></li>
+            <li><a href="#activites.html">Activites</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn" href="#about">Nous rejoindre</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section == Accueil section-->
+      <section id="hero" class="hero section dark-background">
+        <img src="assets/img/img-dahira.jpg" alt="" data-aos="fade-in" />
+
+        <div
+          class="container d-flex flex-column align-items-center text-center"
+        >
+          <h2 data-aos="fade-up" data-aos-delay="100"></h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Bienvenue dans le site du Dahira MIFTAHOUN NASRI Guédiawaye
+          </p>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <a>
+              <iframe
+                width="660"
+                height="315"
+                src="https://www.youtube.com/embed/OU1cioypFnQ?si=T9HeN-ZWcqrAvAlW"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </a>
+            <!-- <a
+              href="https://youtu.be/OU1cioypFnQ?si=DdJrWN9ZUAx8u41y"
+              class="glightbox pulsating-play-btn"
+            ></a> -->
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section === À propos de nous-->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>À propos de nous</h2>
+          <p>
+            Nous sommes une communauté fidèle aux enseignements de Cheikh
+            Ahmadou Bamba, œuvrant pour la promotion de la foi, du travail et du
+            savoir.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p>
+                Fondée sur les principes du Mouridisme, notre congrégation œuvre
+                chaque jour pour préserver et transmettre l'héritage spirituel
+                et culturel légué par Cheikh Ahmadou Bamba.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Encourager la pratique religieuse sincère et l'élévation
+                    spirituelle.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Promouvoir l'éducation et l'apprentissage pour tous, sans
+                    distinction.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i>
+                  <span
+                    >Valoriser le travail honnête comme acte d'adoration et de
+                    dignité.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <p>
+                À travers nos initiatives sociales, éducatives et spirituelles,
+                nous aspirons à construire une société pacifique, solidaire et
+                prospère, fidèle aux valeurs du Mouridisme. Notre engagement
+                repose sur la foi, l'amour du travail et le service désintéressé
+                envers la communauté.
+              </p>
+              <a href="#missions" class="read-more">
+                <span>En savoir plus</span><i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /About Section -->
+
+      <!-- Services Section == Nos Mission-->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Missions</h2>
+          <p>
+            Nos missions s’inspirent des enseignements de Cheikh Ahmadou Bamba,
+            prônant la foi, le travail, l’éducation, la paix et la solidarité.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-journal-bookmark"></i>
+                </div>
+                <h3>Transmission Spirituelle</h3>
+                <p>
+                  Préserver et propager l’héritage spirituel de Cheikh Ahmadou
+                  Bamba à travers l'enseignement du mouridisme.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-hammer"></i>
+                </div>
+                <h3>Promotion du Travail</h3>
+                <p>
+                  Valoriser l'effort personnel et le travail productif comme
+                  chemin vers la dignité et l'élévation spirituelle.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-mortarboard"></i>
+                </div>
+                <h3>Éducation et Formation</h3>
+                <p>
+                  Former les membres à la connaissance religieuse et au
+                  développement personnel par l’éducation continue.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-people"></i>
+                </div>
+                <h3>Solidarité Communautaire</h3>
+                <p>
+                  Renforcer l'unité et l'entraide entre les membres de la
+                  communauté à travers des actions sociales et culturelles.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-tree"></i>
+                </div>
+                <h3>Développement Durable</h3>
+                <p>
+                  Initier et accompagner des projets économiques, agricoles et
+                  éducatifs pour l'autonomie de la communauté.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi-peace"></i>
+                </div>
+                <h3>Promotion de la Paix</h3>
+                <p>
+                  Diffuser un message universel de paix, de tolérance et de
+                  respect entre les peuples, fidèle à la voie de Cheikh Ahmadou
+                  Bamba.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+
+      <!-- /Services Section -->
+
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section dark-background"
+      >
+        <img src="assets/img/img-dahira.jpg" alt="" />
+
+        <div class="container">
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-9 text-center text-xl-start">
+              <h3>Engagez-vous avec nous</h3>
+              <p>
+                Rejoignez notre mission en soutenant nos initiatives
+                spirituelles, éducatives et sociales, inspirées par les
+                enseignements de Cheikh Ahmadou Bamba. Ensemble, construisons
+                une communauté forte, solidaire et tournée vers l'excellence.
+              </p>
+            </div>
+            <div class="col-xl-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="#contact">Nous rejoindre</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
+      <!-- Clients Section -->
+      <section id="clients" class="clients section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Section Title -->
+          <div class="section-title">
+            <h2>Nos Alliés Spirituels</h2>
+            <p>
+              Forts de nos convictions et de notre foi commune, nos alliés
+              spirituels nous accompagnent dans la diffusion des valeurs
+              d'amour, de paix et de fraternité héritées des enseignements de
+              Cheikh Ahmadou Bamba.
+            </p>
+          </div>
+          <!-- End Section Title -->
+          <!-- Clients Logos -->
+          <div class="row g-0 clients-wrap">
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="./assets/img/clients/client-1.jpg"
+                class="img-fluid"
+                alt="Allié 1"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-2.jpg"
+                class="img-fluid"
+                alt="Allié 2"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-3.jpg"
+                class="img-fluid"
+                alt="Allié 3"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-4.jpg"
+                class="img-fluid"
+                alt="Allié 4"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-5.jpg"
+                class="img-fluid"
+                alt="Allié 5"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-6.jpg"
+                class="img-fluid"
+                alt="Allié 6"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-7.jpg"
+                class="img-fluid"
+                alt="Allié 7"
+              />
+            </div>
+
+            <div class="col-xl-3 col-md-4 client-logo">
+              <img
+                src="assets/img/clients/client-8.jpg"
+                class="img-fluid"
+                alt="Allié 8"
+              />
+            </div>
+          </div>
+          <!-- End Clients Logos -->
+        </div>
+      </section>
+
+      <!-- /Clients Section -->
+
+      <!-- Stats Section -->
+      <section
+        id="stats"
+        class="stats section dark-background"
+        style="
+          background-image: url('assets/img/Grande-mosquée-de-Touba.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div
+          class="container position-relative"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="subheading">
+            <h3>Nos Réalisations</h3>
+            <p>
+              Par la grâce d'Allah et l'engagement de chacun, notre congrégation
+              continue d'impacter positivement la communauté.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="850"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Membres actifs</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="135"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Événements organisés</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="12000"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Heures de bénévolat</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="68"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Actions caritatives</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+
+      <!-- /Stats Section -->
+
+      <!-- Portfolio Section ====Galerie-->
+      <div
+        class="row gy-4 isotope-container"
+        id="galerie-membres"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <!-- Les membres seront injectés ici dynamiquement -->
+      </div>
+
+      <!-- /Portfolio Section -->
+
+      <!-- Pricing Section ===Missions-->
+      <!-- /Pricing Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+        <div class="container-fluid">
+          <div class="row gy-4">
+            <!-- Colonne de gauche avec contenu statique -->
+            <div
+              class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1"
+            >
+              <div
+                class="content px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h3>
+                  <span>Les différents présidents du </span
+                  ><strong>Dahira</strong>
+                </h3>
+                <p>Voici les présidents avec leurs descriptions.</p>
+              </div>
+
+              <div
+                class="faq-container px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                id="faq-container"
+              >
+                <!-- Les questions et réponses seront ajoutées dynamiquement ici -->
+              </div>
+            </div>
+
+            <!-- Colonne de droite avec image -->
+            <div class="col-lg-5 order-1 order-lg-2">
+              <img
+                src="assets/img/logo-nasri.jpg"
+                class="img-fluid"
+                alt=""
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Faq Section -->
+
+      <!-- Recent Posts Section -->
+      <section id="recent-posts" class="recent-posts section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Actualités Récentes</h2>
+          <p>Retrouvez ici les dernières actualités de notre communauté.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div id="recent-posts-container" class="row gy-4">
+            <!-- Les articles seront injectés ici dynamiquement par le script -->
+          </div>
+        </div>
+      </section>
+
+      <!-- /Recent Posts Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contactez-nous</h2>
+          <p>
+            Pour toute question, information ou collaboration avec notre
+            congrégation, n'hésitez pas à nous écrire ou nous appeler.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <!-- Contact Information -->
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-4">
+                  <div
+                    class="info-item d-flex"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <i class="bi bi-geo-alt flex-shrink-0"></i>
+                    <div>
+                      <h3>Adresse</h3>
+                      <p>Rue Sam Notaire, Notaire, Guédiawaye</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div
+                    class="info-item d-flex"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <i class="bi bi-telephone flex-shrink-0"></i>
+                    <div>
+                      <h3>Téléphone</h3>
+                      <p>(+221) 77 762 18 06</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div
+                    class="info-item d-flex"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <i class="bi bi-envelope flex-shrink-0"></i>
+                    <div>
+                      <h3>Email</h3>
+                      <p>sitedahira@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Contact Information -->
+          </div>
+        </div>
+      </section>
+
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Miftahoune Nasri Touba-Notaire</h3>
+        <p>
+          Unis dans la foi, nous œuvrons ensemble pour le bien-être de la
+          communauté, en suivant les enseignements du Saint Coran et du Prophète
+          Muhammad (PSL).
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-skype"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename"
+              >Miftahoune Nasri Touba-Notaire</strong
+            >
+            <span>Tous droits réservés</span>
+          </div>
+          <div class="credits">
+            <!-- Les liens dans le pied de page doivent rester intacts -->
+            <!-- Vous pouvez supprimer les liens uniquement si vous avez acheté la version pro -->
+            <!-- Informations de licence : https://bootstrapmade.com/license/ -->
+            <!-- Concevoir par -->
+            <a href="https://bamba-portfolio.vercel.app/">Made</a> by
+            <a href="https://bamba-portfolio.vercel.app/">Khadim</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      fetch("assets/data/membres.json")
+        .then((response) => response.json())
+        .then((membres) => {
+          const container = document.getElementById("galerie-membres");
+          membres.forEach((membre) => {
+            const item = document.createElement("div");
+            item.className = `col-lg-4 col-md-6 portfolio-item isotope-item filter-${membre.categorie}`;
+            item.innerHTML = `
+              <img src="${membre.image}" class="img-fluid" alt="${membre.nom}" />
+              <div class="portfolio-info">
+                <h4>${membre.nom}</h4>
+                <p>${membre.role}</p>
+                <a href="${membre.image}" title="${membre.nom}"
+                  data-gallery="portfolio-gallery-${membre.categorie}"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            `;
+            container.appendChild(item);
+          });
+        })
+        .catch((err) => console.error("Erreur chargement des membres :", err));
+    </script>
+    <!-- Charger les membres dynamiquement depuis le fichier JSON -->
+    <script>
+      fetch("assets/data/membres.json")
+        .then((response) => response.json())
+        .then((membres) => {
+          const container = document.getElementById("galerie-membres");
+
+          // Réinitialiser la galerie avant d'ajouter les nouvelles images pour éviter les doublons
+          container.innerHTML = "";
+
+          membres.forEach((membre) => {
+            const item = document.createElement("div");
+            item.className = `col-lg-4 col-md-6 portfolio-item isotope-item filter-${membre.categorie}`;
+            item.innerHTML = `
+        <div class="portfolio-item-wrapper">
+          <img src="${membre.image}" class="img-fluid" alt="${membre.nom}" />
+          <div class="portfolio-info">
+            <h4>${membre.nom}</h4>
+            <p>${membre.role}</p>
+            <a href="${membre.image}" title="${membre.nom}" class="preview-link">
+              <div class="zoom-btn">
+                <span class="zoom-text">Zoom</span>
+                <div class="zoom-icon">🔍</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      `;
+            container.appendChild(item);
+          });
+
+          // Ajout de l'événement pour afficher la modale quand on clique sur le bouton Zoom
+          const modal = document.getElementById("modal-popup");
+          const modalImg = document.getElementById("popup-image");
+          const captionText = document.getElementById("caption");
+          const closeModal = document.getElementsByClassName("close")[0];
+
+          document.querySelectorAll(".preview-link").forEach(function (link) {
+            link.addEventListener("click", function (e) {
+              e.preventDefault(); // Empêche le lien d'ouvrir une nouvelle page
+
+              modal.style.display = "block";
+              modalImg.src = this.getAttribute("href");
+              captionText.innerHTML = this.getAttribute("title");
+            });
+          });
+
+          closeModal.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          window.onclick = function (event) {
+            if (event.target == modal || event.target == modalImg) {
+              modal.style.display = "none";
+            }
+          };
+
+          // Ajouter un événement pour chaque image
+          document
+            .querySelectorAll(".portfolio-item-wrapper")
+            .forEach(function (item) {
+              // Afficher le bouton Zoom au survol de l'image
+              item.addEventListener("mouseenter", function () {
+                const zoomBtn = item.querySelector(".zoom-btn");
+                zoomBtn.style.display = "block";
+              });
+
+              // Cacher le bouton Zoom lorsqu'on quitte l'image
+              item.addEventListener("mouseleave", function () {
+                const zoomBtn = item.querySelector(".zoom-btn");
+                zoomBtn.style.display = "none";
+              });
+            });
+        })
+        .catch((err) =>
+          console.error("Erreur lors du chargement des membres :", err)
+        );
+    </script>
+
+    <script>
+      // Charger les membres dynamiquement depuis le fichier JSON
+      fetch("assets/data/membres.json")
+        .then((response) => response.json())
+        .then((membres) => {
+          const container = document.getElementById("faq-container");
+
+          // Réinitialiser la FAQ avant de charger les nouvelles questions pour éviter les doublons
+          container.innerHTML = "";
+
+          membres.forEach((membre, index) => {
+            // Associer une question à chaque membre
+            const faqItem = document.createElement("div");
+            faqItem.className = `faq-item ${index === 0 ? "faq-active" : ""}`; // L'élément premier est actif par défaut
+            faqItem.setAttribute("data-aos", "fade-up");
+            faqItem.setAttribute("data-aos-delay", 100 * (index + 1));
+
+            faqItem.innerHTML = `
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>${membre.nom} - ${membre.role}</h3>
+              <div class="faq-content">
+                <p>
+                  ${membre.description || "Aucune description disponible."}
+                </p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            `;
+
+            container.appendChild(faqItem);
+
+            // Ajouter un gestionnaire d'événement pour le toggle (ouvrir/fermer)
+            faqItem
+              .querySelector(".faq-toggle")
+              .addEventListener("click", function () {
+                faqItem.classList.toggle("faq-active");
+              });
+          });
+        })
+        .catch((err) =>
+          console.error("Erreur lors du chargement des membres :", err)
+        );
+    </script>
+
+    <!-- Modal -->
+    <div id="modal-popup" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="popup-image" />
+      <div id="caption"></div>
+    </div>
+    <script>
+      fetch("assets/data/posts.json")
+        .then((response) => response.json())
+        .then((posts) => {
+          const container = document.getElementById("recent-posts-container");
+
+          container.innerHTML = ""; // Nettoyer avant d'ajouter
+
+          posts.forEach((post, index) => {
+            const postItem = document.createElement("div");
+            postItem.className = "col-xl-4 col-md-6";
+            postItem.setAttribute("data-aos", "fade-up");
+            postItem.setAttribute("data-aos-delay", (index + 1) * 100);
+
+            postItem.innerHTML = `
+              <article>
+                <div class="post-img">
+                  <img src="${post.image}" alt="${
+              post.title
+            }" class="img-fluid" />
+                </div>
+    
+                <p class="post-category">${post.category}</p>
+    
+                <h2 class="title">
+                  <a href="${post.link}" target="_blank">${post.title}</a>
+                </h2>
+    
+                <div class="d-flex align-items-center">
+                  <img src="${post.authorImage}" alt="${
+              post.author
+            }" class="img-fluid post-author-img flex-shrink-0" />
+                  <div class="post-meta">
+                    <p class="post-author">${post.author}</p>
+                    <p class="post-date">
+                      <time datetime="${post.date}">${new Date(
+              post.date
+            ).toLocaleDateString()}</time>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            `;
+
+            container.appendChild(postItem);
+          });
+        })
+        .catch((error) =>
+          console.error("Erreur lors du chargement des posts :", error)
+        );
+    </script>
+    <script src="assets/js/contact.js"></script>
+  </body>
+</html>

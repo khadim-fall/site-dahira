@@ -1,0 +1,41 @@
+[
+  {
+    "nom": "Serigne Khadim Fall",
+    "role": "Président Cultural",
+    "categorie": "responsable",
+    "description": "Khadim est le président de la congrégation et supervise toutes les opérations.",
+    "image": "assets/img/membres/membre-1.jpg"
+  },
+  {
+    "nom": "Serigne Youssafa Thiam",
+    "role": "Membre Actif",
+    "categorie": "actif",
+    "description": "Serigne Youssafa Thiam est un membre.",
+    "image": "assets/img/membres/membre-2.jpg"
+  },
+  {
+    "nom": "Serigne Ousmane Fall",
+    "role": "Président du Dahira",
+    "categorie": "honoraire",
+    "description": "Serigne Ousmane Fall est le président de la congrégation et supervise toutes les opérations.",
+    "image": "assets/img/membres/membre-3.jpg"
+  },
+  {
+    "nom": "Serigne Alioune Fall",
+    "role": "Membre Actif",
+    "categorie": "actif",
+    "image": "assets/img/membres/membre-4.jpg"
+  },
+  {
+    "nom": "Serigne Omar Loum",
+    "role": "Membre Actif",
+    "categorie": "actif",
+    "image": "assets/img/membres/membre-5.jpg"
+  },
+  {
+    "nom": "Serigne Khadim Kassé",
+    "role": "Membre Honoraire",
+    "categorie": "honoraire",
+    "image": "assets/img/membres/membre-6.jpg"
+  }
+]
