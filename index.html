@@ -122,13 +122,12 @@
     </style>
     <style>
       .gallery-photo {
-  width: 100%;
-  height: 250px; /* Tu peux ajuster la hauteur */
-  object-fit: cover; /* Coupe et remplit l’image sans la déformer */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
+        width: 100%;
+        height: 250px; /* Tu peux ajuster la hauteur */
+        object-fit: cover; /* Coupe et remplit l’image sans la déformer */
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
 
@@ -148,25 +147,32 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a class="nav-link scrollto" href="#hero" class="active">Accueil</a></li>
-            <li><a class="nav-link scrollto" href="#about">À propos de nous</a></li>
-            <li><a class="nav-link scrollto" href="#history">Historique</a></li>
-            <li><a class="nav-link scrollto" href="#services">Notre Mission</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#hero" class="active"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#about">À propos de nous</a>
+            </li>
+            <!-- 
+            <li><a class="nav-link scrollto" href="#history">Historique</a></li> -->
+            <li>
+              <a class="nav-link scrollto" href="#services">Notre Mission</a>
+            </li>
             <li>
               <a class="nav-link scrollto" href="#activities">Activités</a>
-              <li><a class="nav-link scrollto" href="#gallery">Photos</a></li>
+            </li>
+            <li><a class="nav-link scrollto" href="#gallery">Photos</a></li>
             <li><a class="nav-link scrollto" href="#videos">Vidéos</a></li>
             <li><a class="nav-link scrollto" href="#archives">Archives</a></li>
-
-            </li>
-            <li><a href="#portfolio">Galerie</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           </ul>
+
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-        <a class="cta-btn" href="#about">Nous rejoindre</a>
+        <!-- 
+        <a class="cta-btn scrollto" href="#about">Nous rejoindre</a> -->
       </div>
     </header>
 
@@ -620,29 +626,41 @@
           <h2>Galerie Photos</h2>
           <p>Découvrez les moments forts de la vie de notre congrégation.</p>
         </div>
-      
+
         <div class="container">
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
             <!-- Image 1 -->
             <div class="col-lg-4 col-md-6">
-              <img src="assets/img/gallery/photo2.jpg" alt="Photo 1" class="gallery-photo">
+              <img
+                src="assets/img/gallery/photo2.jpg"
+                alt="Photo 1"
+                class="gallery-photo"
+              />
             </div>
-      
+
             <!-- Image 2 -->
             <div class="col-lg-4 col-md-6">
-              <img src="assets/img/gallery/photo2.jpg" alt="Photo 2" class="gallery-photo">
+              <img
+                src="assets/img/gallery/photo2.jpg"
+                alt="Photo 2"
+                class="gallery-photo"
+              />
             </div>
-      
+
             <!-- Image 3 -->
             <div class="col-lg-4 col-md-6">
-              <img src="assets/img/gallery/photo2.jpg" alt="Photo 3" class="gallery-photo">
+              <img
+                src="assets/img/gallery/photo2.jpg"
+                alt="Photo 3"
+                class="gallery-photo"
+              />
             </div>
-      
+
             <!-- Tu peux ajouter autant d’images que tu veux -->
           </div>
         </div>
       </section>
-      
+
       <!-- Section Vidéos -->
       <section id="videos" class="section">
         <div class="container section-title" data-aos="fade-up">
@@ -655,8 +673,8 @@
 
         <div class="container">
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-            <!-- Exemple de vidéo YouTube intégrée -->
-            <div class="col-lg-12">
+            <!-- Vidéo 1 -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
                 <iframe
                   src="./assets/videos/video-1.mp4"
@@ -665,24 +683,44 @@
                 ></iframe>
               </div>
             </div>
-            <div class="col-lg-12">
+
+            <!-- Vidéo 2 -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
                 <iframe
                   src="./assets/videos/video-2.mp4"
-                  title="Vidéo 1"
+                  title="Vidéo 2"
                   allowfullscreen
                 ></iframe>
               </div>
             </div>
-            <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
-              <video controls width="100%" poster="assets/img/blog/membre-6.jpg">
-                <source src="assets/videos/video-2.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la lecture de vidéo HTML5.
-              </video>
-            </div> -->
+
+            <!-- Ajoutez ici d'autres vidéos si nécessaire -->
+            <!-- Exemple Vidéo 3 -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="./assets/videos/video-3.mp4"
+                  title="Vidéo 3"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Exemple Vidéo 4 -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="./assets/videos/video-4.mp4"
+                  title="Vidéo 4"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- Section Archives -->
       <section id="archives" class="section">
         <div class="container section-title" data-aos="fade-up">
@@ -695,21 +733,45 @@
 
         <div class="container">
           <div class="row gy-4">
-            <!-- Ancienne photo -->
-            <div class="col-lg-4 col-md-4">
-              <img
-                src="assets/img/blog/membre-6.jpg"
-                class="img-fluid"
-                alt="Ancienne photo"
-              />
+            <!-- Card photo -->
+            <div class="col-lg-4 col-md-6">
+              <div class="archive-item" data-aos="fade-up" data-aos-delay="100">
+                <img
+                  src="assets/img/blog/membre-6.jpg"
+                  alt="Ancienne photo"
+                  class="archive-media"
+                />
+              </div>
             </div>
-            <!-- Ancienne vidéo -->
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-              <video controls width="100%" poster="assets/img/blog/membre-6.jpg">
-                <source src="assets/videos/video-3.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la lecture de vidéo HTML5.
-              </video>
+            <div class="col-lg-4 col-md-6">
+              <div class="archive-item" data-aos="fade-up" data-aos-delay="100">
+                <img
+                  src="assets/img/blog/membre-6.jpg"
+                  alt="Ancienne photo"
+                  class="archive-media"
+                />
+              </div>
             </div>
+
+            <!-- Card vidéo -->
+            <div class="col-lg-4 col-md-6">
+              <div class="archive-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="video-wrapper">
+                  <video
+                    controls
+                    preload="none"
+                    poster="assets/img/blog/membre-6.jpg"
+                    class="archive-media"
+                  >
+                    <source src="assets/videos/video-3.mp4" type="video/mp4" />
+                    Votre navigateur ne supporte pas la vidéo HTML5.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clone ces blocs pour ajouter d'autres archives -->
+            <!-- ... -->
           </div>
         </div>
       </section>
@@ -854,7 +916,7 @@
               <div class="stats-item text-center w-100 h-100">
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="850"
+                  data-purecounter-end="200"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
@@ -866,7 +928,7 @@
               <div class="stats-item text-center w-100 h-100">
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="135"
+                  data-purecounter-end="108"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
@@ -878,11 +940,11 @@
               <div class="stats-item text-center w-100 h-100">
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="12000"
+                  data-purecounter-end="468"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>Heures de bénévolat</p>
+                <p>Heures de bénévolat/année</p>
               </div>
             </div>
 
@@ -890,11 +952,11 @@
               <div class="stats-item text-center w-100 h-100">
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="68"
+                  data-purecounter-end="104"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>Actions caritatives</p>
+                <p>Actions caritatives/année</p>
               </div>
             </div>
           </div>
@@ -1054,17 +1116,48 @@
     <footer id="footer" class="footer dark-background">
       <div class="container">
         <h3 class="sitename">Miftahoune Nasri Touba-Notaire</h3>
-        <p>
-          Unis dans la foi, nous œuvrons ensemble pour le bien-être de la
-          communauté, en suivant les enseignements du Saint Coran et du Prophète
-          Muhammad (PSL).
-        </p>
+        <div
+          style="
+            max-width: 900px;
+            margin: 30px auto;
+            background: #f0f0f0;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <marquee behavior="alternate" scrollamount="10">
+            <p
+              style="
+                margin: 0;
+                font-size: 1.1rem;
+                font-style: italic;
+                color: #28a745;
+              "
+            >
+              Unis dans la foi, nous œuvrons ensemble pour le bien-être de la
+              communauté, en suivant les enseignements du Saint Coran et du
+              Prophète Muhammad (PSL) et son serviteur Cheikh Ahmadou Bamba
+              Khadimo Rassoul.
+            </p>
+          </marquee>
+        </div>
+
         <div class="social-links d-flex justify-content-center">
           <a href=""><i class="bi bi-twitter"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-skype"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.facebook.com/share/1AWMHgJczv/"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/khadimmbackefall?igsh=ZDQyaG9jZDdyeHZ5"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://github.com/khadim-fall"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/khadim-fall/"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
         <div class="container">
           <div class="copyright">
@@ -1311,6 +1404,18 @@
           console.error("Erreur lors du chargement des posts :", error)
         );
     </script>
+
+    <script>
+      // Lors du chargement complet de la page
+      window.addEventListener("load", () => {
+        document.querySelectorAll("video").forEach((v) => {
+          v.pause(); // s’assure qu’aucune vidéo n’est en train de jouer
+          v.currentTime = 0; // (optionnel) repositionne au début
+        });
+      });
+    </script>
+
+    <script src="assets/js/blog.js"></script>
     <script src="assets/js/contact.js"></script>
   </body>
 </html>
