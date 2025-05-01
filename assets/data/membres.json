@@ -10,8 +10,8 @@
     "nom": "Serigne Khadim Fall",
     "role": "Président Cultural",
     "categorie": "responsable",
-    "description": "Khadim est le président de la congrégation et supervise toutes les opérations.",
-    "image": "assets/img/membres/membre-1.jpg"
+    "description": "Khadim est le président de la commission culturelle.",
+    "image": "assets/img/membres/khadim-fall.jpg"
   },
   {
     "nom": "Serigne Youssafa Thiam",
@@ -24,7 +24,7 @@
     "nom": "Serigne Ousmane Fall",
     "role": "Président du Dahira",
     "categorie": "responsable",
-    "description": "Serigne Ousmane Fall est le président de la congrégation et supervise toutes les opérations.",
+    "description": "Serigne Ousmane Fall est le président du et supervise toutes les répétitions.",
     "image": "assets/img/membres/membre-3.jpg"
   },
   {
