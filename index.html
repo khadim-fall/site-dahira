@@ -168,6 +168,7 @@
             <li>
               <a class="nav-link scrollto" href="#activities">Activités</a>
             </li>
+            <li><a class="nav-link scrollto" href="#galerie-membres">Membres</a></li>
             <li><a class="nav-link scrollto" href="#gallery">Photos</a></li>
             <li><a class="nav-link scrollto" href="#videos">Vidéos</a></li>
             <li><a class="nav-link scrollto" href="#archives">Archives</a></li>
@@ -194,22 +195,15 @@
             Bienvenue dans le site du Dahira MIFTAHOUN NASRI Guédiawaye
           </p>
           <div data-aos="fade-up" data-aos-delay="300">
-            <a>
-              <video
-                width="660"
-                height="315"
-                src="https://www.youtube.com/embed/OU1cioypFnQ?si=T9HeN-ZWcqrAvAlW"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></video>
-            </a>
-            <!-- <a
-              href="https://youtu.be/OU1cioypFnQ?si=DdJrWN9ZUAx8u41y"
-              class="glightbox pulsating-play-btn"
-            ></a> -->
+            <iframe
+              width="660"
+              height="375"
+              src="https://www.youtube.com/embed/OU1cioypFnQ?si=T9HeN-ZWcqrAvAlW"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -754,7 +748,7 @@
 
         <div class="container">
           <!-- CARROUSEL PHOTOS -->
-          <div class="swiper-container archive-swiper mb-5" data-aos="fade-up">
+          <div class="swiper-container archive-swiper" data-aos="fade-up">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide">
@@ -1043,17 +1037,36 @@
 
       <!-- /Stats Section -->
 
-      <!-- Portfolio Section ====Galerie-->
-      <div
-        class="row gy-4 isotope-container"
-        id="galerie-membres"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
+      <!-- Portfolio Section ====Galerie des membres du dahira-->
+      <section id="galerie-membres" class="py-5 bg-light">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <h2 class="fw-bold">Galerie des Membres</h2>
+            <p class="text-muted">Voici nos membres et leurs rôles au sein de la congrégation</p>
+          </div>
+      
+          <!-- Fonction pour réutiliser le bloc -->
+          <div class="membre-category" id="responsable">
+            <h3 class="mb-4 text-primary border-bottom pb-2">Responsables</h3>
+            <div class="row" id="container-responsable"></div>
+          </div>
+      
+          <div class="membre-category" id="actif">
+            <h3 class="mb-4 text-success border-bottom pb-2">Membres Actifs</h3>
+            <div class="row" id="container-actif"></div>
+          </div>
+      
+          <div class="membre-category" id="honoraire">
+            <h3 class="mb-4 text-warning border-bottom pb-2">Membres Honoraires</h3>
+            <div class="row" id="container-honoraire"></div>
+          </div>
+        </div>
+      </section>
+      
+      
         <!-- Les membres seront injectés ici dynamiquement -->
       </div>
 
-      <!-- /Portfolio Section -->
 
       <!-- Pricing Section ===Missions-->
       <!-- /Pricing Section -->
@@ -1280,84 +1293,69 @@
   Ajout d’un effet de zoom personnalisé (modale, icône, texte)
   Gestion des événements click, mouseenter, mouseleave pour des interactions modernesCharger 
   les membres dynamiquement depuis le fichier JSON -->
-    <script>
-      fetch("assets/data/membres.json")
-        .then((response) => response.json())
-        .then((membres) => {
-          const container = document.getElementById("galerie-membres");
-
-          // Réinitialiser la galerie avant d'ajouter les nouvelles images pour éviter les doublons
-          container.innerHTML = "";
-
-          membres.forEach((membre) => {
-            const item = document.createElement("div");
-            item.className = `col-lg-4 col-md-6 portfolio-item isotope-item filter-${membre.categorie}`;
-            item.innerHTML = `
-        <div class="portfolio-item-wrapper">
-          <img src="${membre.image}" class="img-fluid" alt="${membre.nom}" />
-          <div class="portfolio-info">
-            <h4>${membre.nom}</h4>
-            <p>${membre.role}</p>
-            <p>${membre.description}</p>
-            <a href="${membre.image}" title="${membre.nom}" class="preview-link">
-              <div class="zoom-btn">
-                <span class="zoom-text">Zoom</span>
-                <div class="zoom-icon">🔍</div>
+  <script>
+    fetch("assets/data/membres.json")
+      .then((response) => response.json())
+      .then((membres) => {
+        // Réinitialiser les containers
+        ["responsable", "actif", "honoraire"].forEach(categorie => {
+          const container = document.getElementById(`container-${categorie}`);
+          if (container) container.innerHTML = "";
+        });
+  
+        membres.forEach((membre) => {
+          const container = document.getElementById(`container-${membre.categorie}`);
+          if (!container) return;
+  
+          const item = document.createElement("div");
+          item.className = "col-lg-3 col-md-4 col-sm-6 col-12 mb-4";
+  
+          item.innerHTML = `
+            <div class="card h-100 shadow-sm border-0">
+              <img src="${membre.image}" class="card-img-top" alt="${membre.nom}" />
+              <div class="card-body">
+                <h5 class="card-title">${membre.nom}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${membre.role}</h6>
+                <p class="card-text">${membre.description}</p>
+                <a href="${membre.image}" title="${membre.nom}" class="btn btn-outline-primary btn-sm preview-link">Zoom 🔍</a>
               </div>
-            </a>
-          </div>
-        </div>
-      `;
-            container.appendChild(item);
+            </div>
+          `;
+  
+          container.appendChild(item);
+        });
+  
+        // Logique modale de zoom
+        const zoomModal = document.getElementById("zoomModal");
+        const zoomImage = document.getElementById("zoomImage");
+        const zoomCaption = document.getElementById("zoomCaption");
+        const closeZoom = document.querySelector(".close-zoom");
+  
+        document.querySelectorAll(".preview-link").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            zoomModal.style.display = "block";
+            zoomImage.src = this.getAttribute("href");
+            zoomCaption.innerHTML = this.getAttribute("title");
           });
-
-          // Ajout de l'événement pour afficher la modale quand on clique sur le bouton Zoom
-          const modal = document.getElementById("modal-popup");
-          const modalImg = document.getElementById("popup-image");
-          const captionText = document.getElementById("caption");
-          const closeModal = document.getElementsByClassName("close")[0];
-
-          document.querySelectorAll(".preview-link").forEach(function (link) {
-            link.addEventListener("click", function (e) {
-              e.preventDefault(); // Empêche le lien d'ouvrir une nouvelle page
-
-              modal.style.display = "block";
-              modalImg.src = this.getAttribute("href");
-              captionText.innerHTML = this.getAttribute("title");
-            });
-          });
-
-          closeModal.onclick = function () {
-            modal.style.display = "none";
+        });
+  
+        if (closeZoom) {
+          closeZoom.onclick = () => {
+            zoomModal.style.display = "none";
           };
-
-          window.onclick = function (event) {
-            if (event.target == modal || event.target == modalImg) {
-              modal.style.display = "none";
-            }
-          };
-
-          // Ajouter un événement pour chaque image
-          document
-            .querySelectorAll(".portfolio-item-wrapper")
-            .forEach(function (item) {
-              // Afficher le bouton Zoom au survol de l'image
-              item.addEventListener("mouseenter", function () {
-                const zoomBtn = item.querySelector(".zoom-btn");
-                zoomBtn.style.display = "block";
-              });
-
-              // Cacher le bouton Zoom lorsqu'on quitte l'image
-              item.addEventListener("mouseleave", function () {
-                const zoomBtn = item.querySelector(".zoom-btn");
-                zoomBtn.style.display = "none";
-              });
-            });
-        })
-        .catch((err) =>
-          console.error("Erreur lors du chargement des membres :", err)
-        );
-    </script>
+        }
+  
+        window.onclick = (event) => {
+          if (event.target === zoomModal) {
+            zoomModal.style.display = "none";
+          }
+        };
+      })
+      .catch((err) => console.error("Erreur lors du chargement des membres :", err));
+  </script>
+  
+  
     <!-- charger les mêmes membres, mais les afficher dans la section FAQ -->
     <script>
       fetch("assets/data/membres.json")
@@ -1402,11 +1400,13 @@
     </script>
 
     <!-- Modal -->
-    <div id="modal-popup" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="popup-image" />
-      <div id="caption"></div>
-    </div>
+    <!-- Modale Zoom -->
+<div id="zoomModal" class="zoom-modal">
+  <span class="close-zoom">&times;</span>
+  <img class="zoom-modal-content" id="zoomImage" />
+  <div id="zoomCaption"></div>
+</div>
+
     <!--Scirpt pour les actualiés récentes-->
     <script>
       fetch("assets/data/posts.json")

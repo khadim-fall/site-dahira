@@ -1,5 +1,12 @@
 [
   {
+    "nom": "Serigne Ibrahima Fall",
+    "role": "Membre Cultural",
+    "categorie": "responsable",
+    "description": "Ibrahima est un membre de la commission concervatoire et supervise toutes les Khassidah de répétition.",
+    "image": "assets/img/membres/ibou.jpg"
+  },
+  {
     "nom": "Serigne Khadim Fall",
     "role": "Président Cultural",
     "categorie": "responsable",
@@ -16,7 +23,7 @@
   {
     "nom": "Serigne Ousmane Fall",
     "role": "Président du Dahira",
-    "categorie": "honoraire",
+    "categorie": "responsable",
     "description": "Serigne Ousmane Fall est le président de la congrégation et supervise toutes les opérations.",
     "image": "assets/img/membres/membre-3.jpg"
   },
