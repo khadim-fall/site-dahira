@@ -24,18 +24,21 @@
     "nom": "Serigne Alioune Fall",
     "role": "Membre Actif",
     "categorie": "actif",
+    "description": "Serigne Alioune Fall est le président de Zikroul Lahi (Sam-Fall).",
     "image": "assets/img/membres/membre-4.jpg"
   },
   {
     "nom": "Serigne Omar Loum",
     "role": "Membre Actif",
     "categorie": "actif",
+    "description": "Serigne Omar Loum membre kourel serigne massaba.",
     "image": "assets/img/membres/membre-5.jpg"
   },
   {
     "nom": "Serigne Khadim Kassé",
     "role": "Membre Honoraire",
     "categorie": "honoraire",
+    "description": "Serigne Khadim Kassé membre honoraire du dahira et serigne daara.",
     "image": "assets/img/membres/membre-6.jpg"
   }
 ]

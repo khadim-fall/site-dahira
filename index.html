@@ -129,6 +129,11 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
     </style>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body class="index-page">
@@ -190,7 +195,7 @@
           </p>
           <div data-aos="fade-up" data-aos-delay="300">
             <a>
-              <iframe
+              <video
                 width="660"
                 height="315"
                 src="https://www.youtube.com/embed/OU1cioypFnQ?si=T9HeN-ZWcqrAvAlW"
@@ -199,7 +204,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              ></video>
             </a>
             <!-- <a
               href="https://youtu.be/OU1cioypFnQ?si=DdJrWN9ZUAx8u41y"
@@ -674,49 +679,65 @@
         <div class="container">
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
             <!-- Vidéo 1 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
-                <iframe
-                  src="./assets/videos/video-1.mp4"
-                  title="Vidéo 1"
-                  allowfullscreen
-                ></iframe>
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-1.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
               </div>
             </div>
-
+            <!--/ Vidéo 1 -->
             <!-- Vidéo 2 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
-                <iframe
-                  src="./assets/videos/video-2.mp4"
-                  title="Vidéo 2"
-                  allowfullscreen
-                ></iframe>
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-2.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
               </div>
             </div>
-
-            <!-- Ajoutez ici d'autres vidéos si nécessaire -->
-            <!-- Exemple Vidéo 3 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <!-- /Vidéo 2  -->
+            <!-- Vidéo 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
-                <iframe
-                  src="./assets/videos/video-3.mp4"
-                  title="Vidéo 3"
-                  allowfullscreen
-                ></iframe>
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-3.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
               </div>
             </div>
-
-            <!-- Exemple Vidéo 4 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <!-- /Vidéo 3 -->
+            <!-- Vidéo 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="ratio ratio-16x9">
-                <iframe
-                  src="./assets/videos/video-4.mp4"
-                  title="Vidéo 4"
-                  allowfullscreen
-                ></iframe>
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-1.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
               </div>
             </div>
+            <!-- /Vidéo 4 -->
           </div>
         </div>
       </section>
@@ -732,46 +753,102 @@
         </div>
 
         <div class="container">
-          <div class="row gy-4">
-            <!-- Card photo -->
-            <div class="col-lg-4 col-md-6">
-              <div class="archive-item" data-aos="fade-up" data-aos-delay="100">
+          <!-- CARROUSEL PHOTOS -->
+          <div class="swiper-container archive-swiper mb-5" data-aos="fade-up">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
                 <img
                   src="assets/img/blog/membre-6.jpg"
+                  class="archive-media img-fluid"
                   alt="Ancienne photo"
-                  class="archive-media"
                 />
               </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="archive-item" data-aos="fade-up" data-aos-delay="100">
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
                 <img
                   src="assets/img/blog/membre-6.jpg"
+                  class="archive-media img-fluid"
                   alt="Ancienne photo"
-                  class="archive-media"
                 />
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/blog/membre-6.jpg"
+                  class="archive-media img-fluid"
+                  alt="Ancienne photo"
+                />
+              </div>
+              <!-- Ajoute ici d'autres slides -->
+            </div>
+
+            <!-- Flèches de navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+          <!-- VIDEOS (en grille responsive) -->
+          <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- Vidéo 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-3.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
               </div>
             </div>
 
-            <!-- Card vidéo -->
-            <div class="col-lg-4 col-md-6">
-              <div class="archive-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="video-wrapper">
-                  <video
-                    controls
-                    preload="none"
-                    poster="assets/img/blog/membre-6.jpg"
-                    class="archive-media"
-                  >
-                    <source src="assets/videos/video-3.mp4" type="video/mp4" />
-                    Votre navigateur ne supporte pas la vidéo HTML5.
-                  </video>
-                </div>
+            <!-- Vidéo 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-2.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
               </div>
             </div>
 
-            <!-- Clone ces blocs pour ajouter d'autres archives -->
-            <!-- ... -->
+            <!-- Vidéo 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-1.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
+              </div>
+            </div>
+
+            <!-- Vidéo 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="ratio ratio-16x9">
+                <video
+                  controls
+                  preload="none"
+                  poster="assets/img/blog/membre-6.jpg"
+                  class="w-100"
+                >
+                  <source src="assets/videos/video-4.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1138,7 +1215,7 @@
               Unis dans la foi, nous œuvrons ensemble pour le bien-être de la
               communauté, en suivant les enseignements du Saint Coran et du
               Prophète Muhammad (PSL) et son serviteur Cheikh Ahmadou Bamba
-              Khadimo Rassoul.
+              Khadimou Rassoul.
             </p>
           </marquee>
         </div>
@@ -1168,10 +1245,6 @@
             <span>Tous droits réservés</span>
           </div>
           <div class="credits">
-            <!-- Les liens dans le pied de page doivent rester intacts -->
-            <!-- Vous pouvez supprimer les liens uniquement si vous avez acheté la version pro -->
-            <!-- Informations de licence : https://bootstrapmade.com/license/ -->
-            <!-- Concevoir par -->
             <a href="https://bamba-portfolio.vercel.app/">Made</a> by
             <a href="https://bamba-portfolio.vercel.app/">Khadim</a>
           </div>
@@ -1202,30 +1275,11 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>
-      fetch("assets/data/membres.json")
-        .then((response) => response.json())
-        .then((membres) => {
-          const container = document.getElementById("galerie-membres");
-          membres.forEach((membre) => {
-            const item = document.createElement("div");
-            item.className = `col-lg-4 col-md-6 portfolio-item isotope-item filter-${membre.categorie}`;
-            item.innerHTML = `
-              <img src="${membre.image}" class="img-fluid" alt="${membre.nom}" />
-              <div class="portfolio-info">
-                <h4>${membre.nom}</h4>
-                <p>${membre.role}</p>
-                <a href="${membre.image}" title="${membre.nom}"
-                  data-gallery="portfolio-gallery-${membre.categorie}"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            `;
-            container.appendChild(item);
-          });
-        })
-        .catch((err) => console.error("Erreur chargement des membres :", err));
-    </script>
-    <!-- Charger les membres dynamiquement depuis le fichier JSON -->
+
+    <!--  Nettoyage de la galerie avant d’ajouter les membres (évite les doublons)
+  Ajout d’un effet de zoom personnalisé (modale, icône, texte)
+  Gestion des événements click, mouseenter, mouseleave pour des interactions modernesCharger 
+  les membres dynamiquement depuis le fichier JSON -->
     <script>
       fetch("assets/data/membres.json")
         .then((response) => response.json())
@@ -1244,6 +1298,7 @@
           <div class="portfolio-info">
             <h4>${membre.nom}</h4>
             <p>${membre.role}</p>
+            <p>${membre.description}</p>
             <a href="${membre.image}" title="${membre.nom}" class="preview-link">
               <div class="zoom-btn">
                 <span class="zoom-text">Zoom</span>
@@ -1303,9 +1358,8 @@
           console.error("Erreur lors du chargement des membres :", err)
         );
     </script>
-
+    <!-- charger les mêmes membres, mais les afficher dans la section FAQ -->
     <script>
-      // Charger les membres dynamiquement depuis le fichier JSON
       fetch("assets/data/membres.json")
         .then((response) => response.json())
         .then((membres) => {
@@ -1353,6 +1407,7 @@
       <img class="modal-content" id="popup-image" />
       <div id="caption"></div>
     </div>
+    <!--Scirpt pour les actualiés récentes-->
     <script>
       fetch("assets/data/posts.json")
         .then((response) => response.json())
@@ -1378,7 +1433,9 @@
                 <p class="post-category">${post.category}</p>
     
                 <h2 class="title">
-                  <a href="${post.link}" target="_blank">${post.title}</a>
+                  <a href="#" onclick="event.preventDefault();">${
+                    post.title
+                  }</a>
                 </h2>
     
                 <div class="d-flex align-items-center">
@@ -1405,17 +1462,35 @@
         );
     </script>
 
+    <!-- Ce script qui suit il y'a: 
+     Fonction pour arrêter toutes les vidéos
+     Intercepte tous les clics sur les liens internes (#section)
+     -->
     <script>
-      // Lors du chargement complet de la page
-      window.addEventListener("load", () => {
+      // Fonction pour arrêter toutes les vidéos
+      function stopAllVideos() {
         document.querySelectorAll("video").forEach((v) => {
-          v.pause(); // s’assure qu’aucune vidéo n’est en train de jouer
-          v.currentTime = 0; // (optionnel) repositionne au début
+          v.pause();
+          v.currentTime = 0;
         });
+      }
+
+      // Quand on clique sur un lien interne (comme #archives)
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          stopAllVideos();
+        });
+      });
+
+      // Quand le hash change (utile sur mobile ou avec le bouton retour)
+      window.addEventListener("hashchange", () => {
+        stopAllVideos();
       });
     </script>
 
     <script src="assets/js/blog.js"></script>
     <script src="assets/js/contact.js"></script>
+    <!-- Swiper JS -->
+    <script src="./assets/js/swiper.js"></script>
   </body>
 </html>
