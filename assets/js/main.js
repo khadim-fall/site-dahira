@@ -6,7 +6,11 @@
 * License: https://bootstrapmade.com/license/
 */
 
-/* pause la video*/ document.getElementById("my-video").pause();
+/* pause la video*/
+const element = document.getElementById("my-video");
+if (element) {
+  element.pause();
+}
 
 
 
