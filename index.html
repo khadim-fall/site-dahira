@@ -1237,8 +1237,6 @@
       })
       .catch((err) => console.error("Erreur lors du chargement des membres :", err));
   </script>
-  
-  
     <!-- charger les mêmes membres, mais les afficher dans la section FAQ -->
     <script>
       fetch("assets/data/membres.json")
@@ -1560,6 +1558,27 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
+
+const scrollTopBtn = document.getElementById("scroll-top");
+
+// Quand la modale s'ouvre
+function openGalleryModal(index) {
+  const img = galleryPhotos[index];
+  modalGallery.style.display = "block";
+  modalImgGallery.src = img.src;
+  captionTextGallery.textContent = img.alt;
+  currentGalleryIndex = index;
+
+  // Cacher le bouton de scroll
+  if (scrollTopBtn) scrollTopBtn.style.display = "none";
+}
+
+// Quand la modale se ferme
+function closeGalleryModal() {
+  modalGallery.style.display = "none";
+  if (scrollTopBtn) scrollTopBtn.style.display = "flex";
+}
+
 
 </script>
 
