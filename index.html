@@ -1238,35 +1238,35 @@
   </script>
     <!-- charger les mêmes membres, mais les afficher dans la section FAQ -->
     <script>
-      fetch("assets/data/membres.json")
+      fetch("assets/data/faqs.json")
         .then((response) => response.json())
-        .then((membres) => {
+        .then((faqs) => {
           const container = document.getElementById("faq-container");
-
-          // Réinitialiser la FAQ avant de charger les nouvelles questions pour éviter les doublons
+    
           container.innerHTML = "";
-
-          membres.forEach((membre, index) => {
-            // Associer une question à chaque membre
+    
+          // Ne garder que les membres qui dirigent des postes
+          const dirigeants = faqs.filter((item) => item.dirigeant === true);
+    
+          dirigeants.forEach((faq, index) => {
             const faqItem = document.createElement("div");
-            faqItem.className = `faq-item ${index === 0 ? "faq-active" : ""}`; // L'élément premier est actif par défaut
+            faqItem.className = `faq-item ${index === 0 ? "faq-active" : ""}`;
             faqItem.setAttribute("data-aos", "fade-up");
             faqItem.setAttribute("data-aos-delay", 100 * (index + 1));
-
+    
             faqItem.innerHTML = `
               <i class="faq-icon bi bi-question-circle"></i>
-              <h3>${membre.nom} - ${membre.role}</h3>
+              <h3>${faq.nom} - ${faq.poste}</h3>
               <div class="faq-content">
                 <p>
-                  ${membre.description || "Aucune description disponible."}
+                  ${faq.description || "Aucune description disponible."}
                 </p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
             `;
-
+    
             container.appendChild(faqItem);
-
-            // Ajouter un gestionnaire d'événement pour le toggle (ouvrir/fermer)
+    
             faqItem
               .querySelector(".faq-toggle")
               .addEventListener("click", function () {
@@ -1275,9 +1275,10 @@
           });
         })
         .catch((err) =>
-          console.error("Erreur lors du chargement des membres :", err)
+          console.error("Erreur lors du chargement des FAQs :", err)
         );
     </script>
+    
 
     <!-- Modal -->
     <!-- Modale Zoom -->

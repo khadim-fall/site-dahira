@@ -1,0 +1,27 @@
+[
+    {
+      "nom": "Dieuwrine Ousmane Fall",
+      "poste": "Président",
+      "description": "Président du Dahira.",
+      "dirigeant": true
+    },
+    {
+      "nom": "Khadim Fall",
+      "poste": "Pésident",
+      "description": "Président culturel",
+      "dirigeant": true
+    },
+    {
+      "nom": "Mouhamadou Bamba Seck",
+      "poste": "sécrétaire",
+      "description": " Séctrétaire général du Président du Dahira ",
+      "dirigeant": true
+    },
+    {
+      "nom": "Youssouf Thiam.",
+      "poste": "Membre actif",
+      "description": "Aide aux événements.",
+      "dirigeant": false
+    }
+  ]
+  
