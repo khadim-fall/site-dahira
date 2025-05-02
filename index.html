@@ -498,10 +498,9 @@
         </div>
       </section>
 
-      <!-- /Services Section == missions section -->
+      <!-- / missions section -->
       <!-- Activities Section -->
       <section id="activities" class="services section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Activités</h2>
           <p>
@@ -511,154 +510,38 @@
             et environnementales.
           </p>
         </div>
-        <!-- End Section Title -->
-
+      
         <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-megaphone"></i>
-                </div>
-                <h3>Conférences et Séminaires</h3>
-                <p>
-                  Organisation régulière de conférences pour sensibiliser sur
-                  les valeurs de l’islam et de la confrérie mouride.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-person-video2"></i>
-                </div>
-                <h3>Veillées Religieuses</h3>
-                <p>
-                  Rencontres spirituelles nocturnes pour réciter les khassaïdes
-                  et renforcer les liens spirituels entre les membres.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-house-heart"></i>
-                </div>
-                <h3>Visites aux Malades</h3>
-                <p>
-                  Activités de solidarité destinées à soutenir les membres
-                  hospitalisés ou en situation de fragilité.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-book"></i>
-                </div>
-                <h3>Cours de Coran et Arabe</h3>
-                <p>
-                  Sessions hebdomadaires pour apprendre à lire, réciter et
-                  comprendre le Coran et la langue arabe.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-basket2"></i>
-                </div>
-                <h3>Distribution de Dons</h3>
-                <p>
-                  Récolte et distribution de denrées alimentaires, vêtements ou
-                  fournitures scolaires pour les plus démunis.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi-calendar-event"></i>
-                </div>
-                <h3>Organisation d’Événements</h3>
-                <p>
-                  Planification de manifestations culturelles, religieuses et
-                  éducatives pour mobiliser la communauté.
-                </p>
-              </div>
-            </div>
+          <div class="row gy-4" id="activities-list">
+            <!-- Les activités seront injectées ici -->
           </div>
         </div>
       </section>
+      
+      <!--/ Activites sections -->
       <!-- Galerie Photos -->
       <section id="gallery" class="portfolio section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Galerie Photos</h2>
           <p>Découvrez les moments forts de la vie de notre congrégation.</p>
         </div>
-
+      
         <div class="container">
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-            <!-- Image 1 -->
+          <div class="row gy-4" data-aos="fade-up" data-aos-delay="100" id="gallery-container">
             <div class="col-lg-4 col-md-6">
-              <img
-                src="assets/img/gallery/photo2.jpg"
-                alt="Photo 1"
-                class="gallery-photo"
-              />
+              <img src="assets/img/gallery/photo1.jpg" alt="Photo 1" class="gallery-photo" />
             </div>
-
-            <!-- Image 2 -->
             <div class="col-lg-4 col-md-6">
-              <img
-                src="assets/img/gallery/photo2.jpg"
-                alt="Photo 2"
-                class="gallery-photo"
-              />
+              <img src="assets/img/gallery/photo2.jpg" alt="Photo 2" class="gallery-photo" />
             </div>
-
-            <!-- Image 3 -->
             <div class="col-lg-4 col-md-6">
-              <img
-                src="assets/img/gallery/photo2.jpg"
-                alt="Photo 3"
-                class="gallery-photo"
-              />
+              <img src="assets/img/gallery/photo2.jpg" alt="Photo 3" class="gallery-photo" />
             </div>
-
-            <!-- Tu peux ajouter autant d’images que tu veux -->
+            <!-- Ajoute d'autres images ici -->
           </div>
         </div>
       </section>
+      
 
       <!-- Section Vidéos -->
       <section id="videos" class="section">
@@ -1487,8 +1370,200 @@
         stopAllVideos();
       });
     </script>
+    <!--les activites -->
+    <script>
+      let currentMediaList = [];
+      let currentIndex = 0;
+    
+      fetch('assets/data/activities.json')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('activities-list');
+    
+          data.forEach(activity => {
+            const div = document.createElement('div');
+            div.className = 'col-lg-4 col-md-6';
+    
+            let mediaHTML = '';
+    
+            activity.images.forEach(img => {
+              mediaHTML += `<img src="${img}" class="activity-media img-fluid rounded mb-2" alt="${activity.titre}">`;
+            });
+    
+            activity.videos.forEach(video => {
+              mediaHTML += `
+                <video class="activity-media w-100 mb-2 rounded" muted>
+                  <source src="${video}" type="video/mp4">
+                  Votre navigateur ne prend pas en charge la lecture vidéo.
+                </video>`;
+            });
+    
+            div.innerHTML = `
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi-megaphone"></i></div>
+                <h3>${activity.titre}</h3>
+                <p>${activity.description}</p>
+                <div class="activity-media-container">${mediaHTML}</div>
+              </div>
+            `;
+    
+            container.appendChild(div);
+          });
+        })
+        .catch(err => console.error('Erreur chargement des activités :', err));
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("mediaModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalVid = document.getElementById("modalVideo");
+        const closeBtn = document.querySelector(".media-close");
+        const prevBtn = document.querySelector(".media-prev");
+        const nextBtn = document.querySelector(".media-next");
+    
+        function showMedia(index) {
+          const media = currentMediaList[index];
+          if (!media) return;
+    
+          if (media.tagName === "IMG") {
+            modalImg.src = media.src;
+            modalImg.style.display = "block";
+            modalVid.style.display = "none";
+            modalVid.pause();
+          } else if (media.tagName === "VIDEO") {
+            const src = media.querySelector("source")?.src || media.currentSrc;
+            modalVid.src = src;
+            modalVid.style.display = "block";
+            modalImg.style.display = "none";
+          }
+        }
+    
+        document.addEventListener("click", function (e) {
+          if (e.target.classList.contains("activity-media")) {
+            modal.style.display = "block";
+    
+            // Trouve tous les médias dans le même bloc d'activité
+            const parentContainer = e.target.closest(".activity-media-container");
+            currentMediaList = Array.from(parentContainer.querySelectorAll(".activity-media"));
+            currentIndex = currentMediaList.indexOf(e.target);
+    
+            showMedia(currentIndex);
+          }
+    
+          if (e.target === modal) {
+            modal.style.display = "none";
+            modalVid.pause();
+          }
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+          modalVid.pause();
+        });
+    
+        nextBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % currentMediaList.length;
+          showMedia(currentIndex);
+        });
+    
+        prevBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + currentMediaList.length) % currentMediaList.length;
+          showMedia(currentIndex);
+        });
+      });
+    </script>
+    
     <script src="assets/js/contact.js"></script>
     <!-- Swiper JS -->
     <script src="./assets/js/swiper.js"></script>
+
+   <!-- Lightbox Modal -->
+<div id="mediaModal" class="media-modal">
+  <span class="media-close">&times;</span>
+  <span class="media-prev">&#10094;</span>
+  <span class="media-next">&#10095;</span>
+  <div class="media-content">
+    <img id="modalImage" class="media-element" />
+    <video id="modalVideo" class="media-element" controls></video>
+  </div>
+</div>
+
+
+<!-- 🧍‍♂️ MODALE POUR LES MEMBRES -->
+<!-- <div id="zoomModalMembre" class="zoom-modal">
+  <span class="close-zoom">&times;</span>
+  <img class="zoom-modal-content" id="zoomImageMembre" />
+  <div id="zoomCaptionMembre"></div>
+</div> -->
+
+<!-- 🖼️ MODALE POUR LA GALERIE PHOTOS -->
+<div id="zoomModalGallery" class="zoom-modal">
+  <span class="close-zoom-gallery">&times;</span>
+  <img class="zoom-modal-content" id="zoomImageGallery" />
+  <div id="zoomCaptionGallery"></div>
+  <span class="zoom-nav prev-gallery">&#10094;</span>
+  <span class="zoom-nav next-gallery">&#10095;</span>
+</div>
+<!--script MODALE POUR LA GALERIE PHOTOS -->
+<script>
+  const modalGallery = document.getElementById("zoomModalGallery");
+  const modalImgGallery = document.getElementById("zoomImageGallery");
+  const captionGallery = document.getElementById("zoomCaptionGallery");
+  const closeGallery = document.querySelector(".close-zoom-gallery");
+  const prevGallery = document.querySelector(".prev-gallery");
+  const nextGallery = document.querySelector(".next-gallery");
+  const galleryPhotos = document.querySelectorAll(".gallery-photo");
+
+  let currentGalleryIndex = 0;
+
+  function openGalleryModal(index) {
+    const img = galleryPhotos[index];
+    modalGallery.style.display = "block";
+    modalImgGallery.src = img.src;
+    captionGallery.textContent = img.alt;
+    currentGalleryIndex = index;
+  }
+
+  galleryPhotos.forEach((img, index) => {
+    img.addEventListener("click", () => openGalleryModal(index));
+  });
+
+  closeGallery.onclick = () => modalGallery.style.display = "none";
+
+  nextGallery.onclick = () => {
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryPhotos.length;
+    openGalleryModal(currentGalleryIndex);
+  };
+
+  prevGallery.onclick = () => {
+    currentGalleryIndex =
+      (currentGalleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
+    openGalleryModal(currentGalleryIndex);
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modalGallery) {
+      modalGallery.style.display = "none";
+    }
+  };
+  // Navigation avec les touches du clavier
+document.addEventListener("keydown", function (e) {
+  if (modalGallery.style.display === "block") {
+    if (e.key === "ArrowRight") {
+      currentGalleryIndex = (currentGalleryIndex + 1) % galleryPhotos.length;
+      openGalleryModal(currentGalleryIndex);
+    } else if (e.key === "ArrowLeft") {
+      currentGalleryIndex =
+        (currentGalleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
+      openGalleryModal(currentGalleryIndex);
+    } else if (e.key === "Escape") {
+      modalGallery.style.display = "none";
+    }
+  }
+});
+
+</script>
+
+
+
   </body>
 </html>

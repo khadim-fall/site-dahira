@@ -1,0 +1,36 @@
+[
+  {
+    "id": "dons",
+    "titre": "Distribution de Dons",
+    "description": "Récolte et distribution de denrées alimentaires, vêtements ou fournitures scolaires pour les plus démunis.",
+    "images": [
+      "assets/img/activities/khadim-fall.jpg"
+    ],
+    "videos": [
+      "assets/videos/video-1.mp4"
+    ]
+  },
+  {
+    "id": "conferences",
+    "titre": "Conférences et Séminaires",
+    "description": "Organisation régulière de conférences pour sensibiliser sur les valeurs de l’islam et de la confrérie mouride.",
+    "images": [
+      "assets/img/activities/khadim-fall.jpg"
+    ],
+    "videos": [
+      "assets/videos/video-1.mp4"
+    ]
+  },
+  {
+    "id": "veillees",
+    "titre": "Veillées Religieuses",
+    "description": "Rencontres spirituelles nocturnes pour réciter les khassaïdes et renforcer les liens spirituels entre les membres.",
+    "images": [
+      "assets/img/activities/khadim-fall.jpg",
+      "assets/img/activities/khadim-fall.jpg"
+    ],
+    "videos": [
+      "assets/videos/video-1.mp4"
+    ]
+  }
+]
