@@ -517,7 +517,30 @@
           </div>
         </div>
       </section>
+      <section id="galerie-membres" class="py-5 bg-light">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <h2 class="fw-bold">Galerie des Membres</h2>
+            <p class="text-muted">Voici nos membres et leurs rôles au sein de la congrégation</p>
+          </div>
       
+          <!-- Fonction pour réutiliser le bloc -->
+          <div class="membre-category" id="responsable">
+            <h3 class="mb-4 text-primary border-bottom pb-2">Responsables</h3>
+            <div class="row" id="container-responsable"></div>
+          </div>
+      
+          <div class="membre-category" id="actif">
+            <h3 class="mb-4 text-success border-bottom pb-2">Membres Actifs</h3>
+            <div class="row" id="container-actif"></div>
+          </div>
+      
+          <div class="membre-category" id="honoraire">
+            <h3 class="mb-4 text-warning border-bottom pb-2">Membres Honoraires</h3>
+            <div class="row" id="container-honoraire"></div>
+          </div>
+        </div>
+      </section>
       <!--/ Activites sections -->
       <!-- Galerie Photos -->
       <section id="gallery" class="portfolio section">
@@ -756,7 +779,7 @@
       </section>
       <!-- /Call To Action Section -->
 
-      <!-- Clients Section -->
+      <!-- Clients Section == alliees -->
       <section id="clients" class="clients section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <!-- Section Title -->
@@ -920,31 +943,7 @@
 
       <!-- /Stats Section -->
 
-      <!-- Portfolio Section ====Galerie des membres du dahira-->
-      <section id="galerie-membres" class="py-5 bg-light">
-        <div class="container">
-          <div class="section-title text-center mb-5">
-            <h2 class="fw-bold">Galerie des Membres</h2>
-            <p class="text-muted">Voici nos membres et leurs rôles au sein de la congrégation</p>
-          </div>
       
-          <!-- Fonction pour réutiliser le bloc -->
-          <div class="membre-category" id="responsable">
-            <h3 class="mb-4 text-primary border-bottom pb-2">Responsables</h3>
-            <div class="row" id="container-responsable"></div>
-          </div>
-      
-          <div class="membre-category" id="actif">
-            <h3 class="mb-4 text-success border-bottom pb-2">Membres Actifs</h3>
-            <div class="row" id="container-actif"></div>
-          </div>
-      
-          <div class="membre-category" id="honoraire">
-            <h3 class="mb-4 text-warning border-bottom pb-2">Membres Honoraires</h3>
-            <div class="row" id="container-honoraire"></div>
-          </div>
-        </div>
-      </section>
       
       
         <!-- Les membres seront injectés ici dynamiquement -->
@@ -1581,7 +1580,6 @@ function closeGalleryModal() {
 
 
 </script>
-
 
 
   </body>
